@@ -1,0 +1,475 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.w {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.us {
+  user-select: none;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.color {
+  color: #ff7a45 !important;
+}
+
+.theme-color {
+  color: #08d7ce !important;
+}
+
+.cfff {
+  color: #ffffff !important;
+}
+
+.cff7 {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.theme-bg {
+  background-color: #09d7cf !important;
+}
+
+.red-color {
+  color: #f81919 !important;
+}
+
+.pink-color {
+  color: #fe3971 !important;
+}
+
+.graw-color {
+  color: #606266 !important;
+}
+
+.gray-color {
+  color: #999 !important;
+}
+
+.c666 {
+  color: #6666 !important;
+}
+
+.c606 {
+  color: #606266 !important;
+}
+
+.c333 {
+  color: #333333 !important;
+}
+
+.mgt25 {
+  margin-top: 25px;
+}
+
+.green-color {
+  color: green !important;
+}
+
+.mgt20 {
+  margin-top: 20px;
+}
+
+.mgt10 {
+  margin-top: 10px;
+}
+
+.mgt5 {
+  margin-top: 5px;
+}
+
+.mgr5 {
+  margin-right: 5px;
+}
+
+.mgr10 {
+  margin-right: 10px;
+}
+
+.mgr20 {
+  margin-right: 20px;
+}
+
+.mgr30 {
+  margin-right: 30px;
+}
+
+.mgb20 {
+  margin-bottom: 20px;
+}
+
+.mgb10 {
+  margin-bottom: 10px;
+}
+
+.mgb5 {
+  margin-bottom: 5px;
+}
+
+.mgl20 {
+  margin-left: 20px;
+}
+
+.mgl10 {
+  margin-left: 10px;
+}
+
+.mgl5 {
+  margin-left: 5px;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left !important;
+}
+
+.right {
+  text-align: right !important;
+}
+
+.fw {
+  font-weight: 600;
+}
+
+.ft12 {
+  font-size: 12px;
+}
+
+.ft14 {
+  font-size: 14px;
+}
+
+.ft15 {
+  font-size: 15px;
+}
+
+.ft16 {
+  font-size: 16px;
+}
+
+.ft18 {
+  font-size: 18px;
+}
+
+.ft20 {
+  font-size: 20px;
+}
+
+.ft24 {
+  font-size: 24px;
+}
+
+.ft28 {
+  font-size: 28px;
+}
+
+.ft40 {
+  font-size: 40px;
+}
+
+.brr50 {
+  border-radius: 50%;
+}
+
+.ver-top {
+  vertical-align: top;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.wh100 {
+  width: 100%;
+  height: 100%;
+}
+
+.align-items-c {
+  align-items: center;
+}
+
+.justify-content-a {
+  justify-content: space-around;
+}
+
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-bet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-row-bet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-row-even {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-center-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lineClamp1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: unset;
+  color: #000;
+}
+
+.del-line {
+  text-decoration: line-through;
+}
+
+.line-h {
+  line-height: 1.5;
+}
+
+.lineClamp2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: unset;
+  color: #000;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.centerOffset {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  min-width: 160px !important;
+}
+
+.hot-img {
+  position: relative;
+  top: -3px;
+}
+
+.hover-color:hover {
+  color: #08d7ce !important;
+}
+
+.top30 {
+  top: 12% !important;
+}
+
+/* animate */
+
+@keyframes wave {
+  0% {
+    background: linear-gradient(
+      to right,
+      #a2dfdc,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce
+    );
+  }
+  15% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #a2dfdc,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce
+    );
+  }
+  30% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #08d7ce,
+      #a2dfdc,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce
+    );
+  }
+  45% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #a2dfdc,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce
+    );
+  }
+  60% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #a2dfdc,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce
+    );
+  }
+  75% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #a2dfdc,
+      #08d7ce,
+      #08d7ce
+    );
+  }
+  90% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #a2dfdc,
+      #08d7ce
+    );
+  }
+  100% {
+    background: linear-gradient(
+      to right,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #08d7ce,
+      #a2dfdc
+    );
+  }
+}
+
+.float-left-icon {
+  animation: updown 1.5s linear infinite alternate;
+}
+
+@keyframes updown {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+/* ----------------------el-table 头部滚动固定------------------------- */
+
+.RollingFixed {
+  overflow: visible !important;
+}
+
+.RollingFixed .el-table__header-wrapper {
+  position: sticky;
+  top: 88px;
+  z-index: 1000;
+}
+
+.top138 .el-table__header-wrapper {
+  top: 138px;
+}

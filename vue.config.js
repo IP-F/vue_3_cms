@@ -15,5 +15,5 @@ module.exports = {
                 resolvers: [ElementPlusResolver()],
             }),
         )
-    }
+    },
 }
