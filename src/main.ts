@@ -5,7 +5,7 @@ import store from '@/store'
 import HQrequest from '@/service'
 import './assets/css/index.less'
 
-interface dataType {
+/* interface dataType {
   bizStatus: string
   code: string
   msg: string
@@ -15,10 +15,9 @@ HQrequest.request<dataType>({
   method: 'GET'
 }).then((res) => {
   console.log('res: ', res)
-})
+}) */
 
 const app = createApp(App)
 app.use(router)
 app.use(store)
 app.mount('#app')
-console.log('app: ')
