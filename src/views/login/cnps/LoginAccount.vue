@@ -29,8 +29,22 @@ export default defineComponent({
       password: ''
     })
     const rules = {
-      name: [{ required: true, message: '请输入账号', trigger: 'blur' }],
-      password: [{ required: true, message: '请输入密码', trigger: 'blur' }]
+      name: [
+        { required: true, message: '请输入账号', trigger: 'blur' },
+        {
+          pattern: /^[A-z0-9]{5,10}$/,
+          message: '请输入5-10个字母数字',
+          trigger: 'blur'
+        }
+      ],
+      password: [
+        { required: true, message: '请输入密码', trigger: 'blur' },
+        {
+          pattern: /^[A-z0-9]{5,10}$/,
+          message: '请输入5-10个字母数字',
+          trigger: 'blur'
+        }
+      ]
     }
     const FormRef = ref<InstanceType<typeof ElForm>>()
     const asd = () => {
