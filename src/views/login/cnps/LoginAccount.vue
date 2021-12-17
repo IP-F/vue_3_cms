@@ -11,7 +11,7 @@
         <el-input v-model="accountForm.name"></el-input>
       </el-form-item>
       <el-form-item label="密码" prop="password">
-        <el-input v-model="accountForm.password"></el-input>
+        <el-input v-model="accountForm.password" show-password></el-input>
       </el-form-item>
     </el-form>
   </div>
@@ -20,10 +20,14 @@
 <script lang="ts">
 import { reactive, defineComponent, ref } from 'vue'
 import { ElForm } from 'element-plus'
+import { useStore } from 'vuex'
+import Store from '@/utils/store'
 import HQrequest from '@/service'
 export default defineComponent({
   name: 'loginAccount',
   setup() {
+    const asd = useStore()
+    asd.dispatch('loginStore/accountLogin', '111')
     const accountForm = reactive({
       name: '',
       password: ''
@@ -47,11 +51,18 @@ export default defineComponent({
       ]
     }
     const FormRef = ref<InstanceType<typeof ElForm>>()
-    const asd = () => {
+    const accountLogin = (isKeepRemenber: boolean) => {
       console.log('accountForm: ', accountForm)
       FormRef.value?.validate((valid) => {
         console.log('valid: ', valid)
         if (valid) {
+          if (isKeepRemenber) {
+            Store.setItem('account', accountForm.name)
+            Store.setItem('password', accountForm.password)
+          } else {
+            Store.deleteItem('account')
+            Store.deleteItem('password')
+          }
           interface dataType {
             bizStatus: string
             code: string
@@ -71,7 +82,7 @@ export default defineComponent({
         }
       })
     }
-    return { accountForm, rules, FormRef, asd }
+    return { accountForm, rules, FormRef, accountLogin }
   }
 })
 </script>

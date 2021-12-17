@@ -13,7 +13,7 @@
       </el-tabs>
     </el-card>
     <div class="login-tools mgt5 flex-row-bet align-items-c">
-      <el-checkbox v-model="isPassword" label="记住密码"></el-checkbox>
+      <el-checkbox v-model="isKeepPassword" label="记住密码"></el-checkbox>
       <el-link>忘记密码</el-link>
     </div>
     <el-button class="login-btn" type="primary" @click="loginHandle"
@@ -34,7 +34,7 @@ export default {
   },
   setup() {
     const activeName = ref('first')
-    const isPassword = ref(true)
+    const isKeepPassword = ref(true)
     const AccountRef = ref<InstanceType<typeof LoginAccount>>()
     const PhoneRef = ref<InstanceType<typeof LoginPhone>>()
     const handleClick = () => {
@@ -42,11 +42,11 @@ export default {
     }
     const loginHandle = () => {
       console.log('loginHandle: ')
-      AccountRef.value?.asd()
+      AccountRef.value?.accountLogin(isKeepPassword.value)
     }
     return {
       activeName,
-      isPassword,
+      isKeepPassword,
       AccountRef,
       PhoneRef,
       handleClick,
