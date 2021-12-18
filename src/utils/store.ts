@@ -3,7 +3,11 @@ class Store {
     window.localStorage.setItem(key, JSON.stringify(value))
   }
   getItem(key: string) {
-    window.localStorage.getItem(key)
+    const value = window.localStorage.getItem(key)
+    if (value) {
+      JSON.parse(value)
+    }
+    return value ? JSON.parse(value) : value
   }
   deleteItem(key: string) {
     window.localStorage.removeItem(key)

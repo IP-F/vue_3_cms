@@ -21,13 +21,12 @@
 import { reactive, defineComponent, ref } from 'vue'
 import { ElForm } from 'element-plus'
 import { useStore } from 'vuex'
-import Store from '@/utils/store'
-import HQrequest from '@/service'
+
 export default defineComponent({
   name: 'loginAccount',
   setup() {
-    const asd = useStore()
-    asd.dispatch('loginStore/accountLogin', '111')
+    const $store = useStore()
+    const FormRef = ref<InstanceType<typeof ElForm>>()
     const accountForm = reactive({
       name: '',
       password: ''
@@ -50,35 +49,17 @@ export default defineComponent({
         }
       ]
     }
-    const FormRef = ref<InstanceType<typeof ElForm>>()
+
     const accountLogin = (isKeepRemenber: boolean) => {
       console.log('accountForm: ', accountForm)
       FormRef.value?.validate((valid) => {
         console.log('valid: ', valid)
         if (valid) {
-          if (isKeepRemenber) {
-            Store.setItem('account', accountForm.name)
-            Store.setItem('password', accountForm.password)
-          } else {
-            Store.deleteItem('account')
-            Store.deleteItem('password')
-          }
-          interface dataType {
-            bizStatus: string
-            code: string
-            msg: string
-          }
           const data = {
             name: accountForm.name,
             password: accountForm.password
           }
-          HQrequest.request<dataType>({
-            url: '/login',
-            method: 'POST',
-            data
-          }).then((res) => {
-            console.log('res: ', res)
-          })
+          $store.dispatch('loginStore/accountLogin', { data, isKeepRemenber })
         }
       })
     }

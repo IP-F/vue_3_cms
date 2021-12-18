@@ -3,7 +3,7 @@ const TIME_OUT = 10000
 
 switch (process.env.NODE_ENV) {
   case 'development':
-    BASE_URL = 'http://152.136.185.210:5000'
+    BASE_URL = '/api'
     break
   case 'production':
     BASE_URL = 'http://codewhy.org/prod'
